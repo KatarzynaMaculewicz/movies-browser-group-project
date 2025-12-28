@@ -51,7 +51,8 @@ export const MovieList = () => {
 
   const onPageChange = (newPage) => {
     if (newPage > 0 && newPage <= totalPages) {
-      navigate(`?page=${newPage}`);
+      searchParams.set("page", newPage);
+      navigate(`?${searchParams.toString()}`);
     }
   };
 

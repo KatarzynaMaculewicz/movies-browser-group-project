@@ -12,7 +12,8 @@ import {
     Tag, 
     RatingContent,
     Rating,
-    Star
+    Star,
+    Camera
 } from "./styled";
 import { GENRES } from "../../../Movies/MovieList/MovieListCard";
 
@@ -30,7 +31,7 @@ export const ProfileMovies = ({ credits}) =>  (
                                     alt={movie.title}
                                     />
                                 ) : (
-                                    <div></div>
+                                    <div><Camera /></div>
                                 )}
                             </TileImage>
                                 <MovieTile>
@@ -72,7 +73,7 @@ export const ProfileMovies = ({ credits}) =>  (
                                     alt={movie.title}
                                     />
                                 ) : (
-                                    <div></div>
+                                  <div> <Camera /> </div> 
                                 )}
                             </TileImage>
                                 <MovieTile>

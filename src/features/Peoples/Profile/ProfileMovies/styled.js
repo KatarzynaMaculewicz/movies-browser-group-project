@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as StarIcon } from "../../../../images/shape-star.svg";
+import { ReactComponent as CameraIcon } from "../../../../images/video.svg";
 
 export const Wrapper = styled.div`
 width: auto;
@@ -108,14 +109,18 @@ export const Tile = styled.div`
 export const TileImage = styled.div`
   max-width: 292px;
   width: 100%;
-  height: 434px;
+  height: 438px;
   border-radius: 5px;
   margin-bottom: 12px;
   background-color: ${({ theme }) => theme.colors.waterloo};
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   @media(max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
@@ -265,4 +270,16 @@ vertical-align: middle;
     margin-right: 4px;
     vertical-align: middle;
 }
+`;
+
+export const Camera = styled(CameraIcon)`
+    width: 128px;
+    height: 128px;
+    align-self: center;
+    vertical-align: middle;
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        width: 64px;
+        height: 64px;
+    }
 `;

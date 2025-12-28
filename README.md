@@ -5,7 +5,7 @@
 ## 🔗 Demo
 ### [👉 Click here to see the live demo](https://romvsss.github.io/movies-browser-group-project/#/movies)
 
-* GIF showing the functionality of our movies browser site will be added soon :)
+![demoGif](readme/gif.gif)
 
 ## 🌟 Features
 

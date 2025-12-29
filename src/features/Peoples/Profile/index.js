@@ -11,6 +11,7 @@ import { fetchPersonDetails,
          selectPersonCredits,
          selectDetailsStatus 
 } from "../peopleSlice";
+import { selectGenres } from "../../Movies/movieSlice";
 
 export const Profile = () => {
   const { id } = useParams();
@@ -19,6 +20,7 @@ export const Profile = () => {
   const person = useSelector(selectPersonDetails);
   const credits = useSelector(selectPersonCredits);
   const status = useSelector(selectDetailsStatus);
+  const genresMap = useSelector(selectGenres);
 
   useEffect(() => {
     dispatch(fetchPersonDetails(id));
@@ -31,7 +33,7 @@ export const Profile = () => {
   return (
     <Wrapper>
     <ProfileContainer person={person} />
-          <ProfileMovies credits={credits} />          
+          <ProfileMovies credits={credits} genresMap={genresMap} />         
  </Wrapper>
   );
 };

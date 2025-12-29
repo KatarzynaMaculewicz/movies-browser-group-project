@@ -15,9 +15,8 @@ import {
     Star,
     Camera
 } from "./styled";
-import { GENRES } from "../../../Movies/MovieList/MovieListCard";
 
-export const ProfileMovies = ({ credits}) =>  (
+export const ProfileMovies = ({ credits, genresMap }) => (
     <Wrapper>
 <PersonSection>
                          <Header>Movies - cast ({credits?.cast?.length || 0})</Header>
@@ -39,10 +38,8 @@ export const ProfileMovies = ({ credits}) =>  (
                                     <Year>{movie.release_date ? 
                                     new Date(movie.release_date).getFullYear() : "Unknown year"}</Year>
                                     <Tags>
-                                         {movie.genre_ids?.map((id) => (
-                                          <Tag key={id}>
-                                         {GENRES[id] || "Unknown"}
-                                           </Tag>
+                                        {movie.genre_ids?.map((id) => (
+                                            <Tag key={id}>{genresMap[id] || "Unknown"}</Tag>
                                         ))}
                                     </Tags>   
                                 
@@ -81,12 +78,12 @@ export const ProfileMovies = ({ credits}) =>  (
                                     <Year>{movie.release_date ? 
                                     new Date(movie.release_date).getFullYear() : "Unknown year"}</Year>
                                     <Tags>
-                                         {movie.genre_ids?.map((id) => (
-                                          <Tag key={id}>
-                                         {GENRES?.[id] || "Unknown"}
-                                           </Tag>
+                                        {movie.genre_ids?.map((id) => (
+                                            <Tag key={id}>
+                                                {genresMap[id] || "Unknown"}
+                                            </Tag>
                                         ))}
-                                    </Tags>   
+                                    </Tags>
                                 
                                     <RatingContent>
                                         <Rating>

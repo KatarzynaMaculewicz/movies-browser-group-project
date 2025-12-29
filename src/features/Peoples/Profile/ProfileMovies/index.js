@@ -51,7 +51,11 @@ export const ProfileMovies = ({ credits, genresMap }) => (
                                                   maximumFractionDigits: 1,
                                              })}`}
                                         </Rating>
-                                           {movie.vote_count} votes
+                                            {movie.vote_count === 0
+                                            ? "No votes yet"
+                                            : `${movie.vote_count} ${
+                                            movie.vote_count === 1 ? "vote" : "votes"
+                                            }`}
                                     </RatingContent>   
                                   </MovieTile>                      
                             </Tile> 
@@ -89,7 +93,11 @@ export const ProfileMovies = ({ credits, genresMap }) => (
                                         <Rating>
                                             <Star />{movie.vote_average.toFixed(1)}
                                         </Rating>
-                                           {movie.vote_count} votes
+                                            {movie.vote_count === 0
+                                            ? "No votes yet"
+                                            : `${movie.vote_count} ${
+                                            movie.vote_count === 1 ? "vote" : "votes"
+                                            }`}
                                     </RatingContent>   
                                   </MovieTile>                      
                             </Tile> 

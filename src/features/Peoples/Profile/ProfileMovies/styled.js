@@ -108,11 +108,11 @@ export const Tile = styled.div`
 
 export const TileImage = styled.div`
   max-width: 292px;
+  aspect-ratio: 2.92 / 4.34;
   width: 100%;
-  height: 438px;
   border-radius: 5px;
   margin-bottom: 12px;
-  background-color: ${({ theme }) => theme.colors.waterloo};
+  background-color: ${({ theme }) => theme.colors.silver};
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -277,6 +277,7 @@ export const Camera = styled(CameraIcon)`
     height: 128px;
     align-self: center;
     vertical-align: middle;
+    opacity: 0.5;
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         width: 64px;

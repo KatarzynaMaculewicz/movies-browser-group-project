@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const PeopleListWrapper = styled.div`
+  max-width: 1368px;
+  margin: 0 auto;
+`;
+
 export const StyledHeader = styled.h1`
   color: ${({ theme }) => theme.colors.black};
   margin: 56px 0 24px 0;

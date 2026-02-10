@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin: 40px 0 103px 0;
-  gap: 24px;
+  gap: 12px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     gap: 8px;
@@ -57,6 +57,7 @@ export const PageInfo = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
+  margin: 0 12px;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;

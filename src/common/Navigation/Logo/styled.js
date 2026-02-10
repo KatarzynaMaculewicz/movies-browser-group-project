@@ -33,9 +33,11 @@ export const PageTitle = styled.p`
 export const VideoIcon = styled(VideoSvg)`
   height: 40px;
   width: 40px;
+  margin: 27px 0;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     width: 17px;
     height: 17px;
+    margin: 0px;
   }
 `;

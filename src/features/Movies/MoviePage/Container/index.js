@@ -20,17 +20,25 @@ export const MovieSection = ({ movie }) => (
         <MovieTitle>{movie.title}</MovieTitle>
 
         <TitleRatingContent>
-          <Layout>
-            <TitleRating>
-              <Star40px />
-              {movie.vote_average.toLocaleString("pl-PL", {
-                minimumFractionDigits: 1,
-                maximumFractionDigits: 1,
-              })}
-            </TitleRating>
-            / 10
-          </Layout>
-          <Votes>{movie.vote_count} votes</Votes>
+          {movie.vote_count === 0 ? (
+            <>
+              <Votes>No votes yet</Votes>
+            </>
+          ) : (
+            <>
+              <Layout>
+                <TitleRating>
+                  <Star40px />
+                  {movie.vote_average.toLocaleString("pl-PL", {
+                    minimumFractionDigits: 1,
+                    maximumFractionDigits: 1,
+                  })}
+                </TitleRating>
+                / 10
+              </Layout>
+              <Votes>{movie.vote_count} votes</Votes>
+            </>
+          )}
         </TitleRatingContent>
       </TitleContainer>
     </Container>

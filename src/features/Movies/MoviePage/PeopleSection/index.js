@@ -18,7 +18,7 @@ export const Cast = ({ credits }) => {
                       <Header>Cast</Header>
                             <TileSection>
                               {credits.cast.slice(0, 10).map(person => (
-                                <Tile key={person.id}>
+                                <Tile to={`/people/${person.id}`}>
                                   <TileImage>
                                     {person.profile_path ? (
                                       <img
@@ -39,7 +39,7 @@ export const Cast = ({ credits }) => {
                       <Header>Crew</Header>
                             <TileSection>
                               {credits.crew.slice(0, 10).map(person => (
-                                <Tile key={person.id}>
+                                <Tile to={`/people/${person.id}`}>
                                    <TileImage>
                                     {person.profile_path ? (
                                       <img 

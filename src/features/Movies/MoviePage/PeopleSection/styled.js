@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as PersonIcon } from "../../../../images/Person.svg";
+import { Link } from "react-router-dom";
 
 export const PeopleSection = styled.section`
 max-width: 1368px;
@@ -51,7 +52,9 @@ margin-bottom: 48px;
 }
 `;
 
-export const Tile = styled.div`
+export const Tile = styled(Link)`
+text-decoration: none;
+color: inherit;
 width: 208px;
 height: auto;
 border-radius: 5px;
@@ -62,6 +65,16 @@ margin-bottom: 8px;
 display: flex;
 flex-direction: column;
 align-items: center;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+    box-shadow: ${({ theme }) => theme.effects.tileShadowHover};
+  }
+
+  &:active {
+    filter: brightness(110%);
+  }
 
 @media(max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) { 
     width: 136px;

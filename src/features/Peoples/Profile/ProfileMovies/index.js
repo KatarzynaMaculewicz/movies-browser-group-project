@@ -22,7 +22,7 @@ export const ProfileMovies = ({ credits, genresMap }) => (
                          <Header>Movies - cast ({credits?.cast?.length || 0})</Header>
                         <TileSection >
                             {credits?.cast?.map((movie) => (
-                                <Tile key={movie.credit_id}>
+                                <Tile key={movie.id} to={`/movies/${movie.id}`}>
                             <TileImage>
                                 {movie.poster_path ? (
                                     <img 
@@ -66,7 +66,7 @@ export const ProfileMovies = ({ credits, genresMap }) => (
                          <Header>Movies - crew ({credits?.crew?.length || 0})</Header>
                          <TileSection >
                             {credits?.crew?.map((movie) => (
-                                <Tile key={movie.credit_id}>
+                                <Tile key={movie.id} to={`/movies/${movie.id}`}>
                             <TileImage>
                                 {movie.poster_path ? (
                                     <img 

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { ReactComponent as StarIcon } from "../../../../images/shape-star.svg";
 import { ReactComponent as CameraIcon } from "../../../../images/video.svg";
+import { Link } from "react-router-dom";
 
 export const Wrapper = styled.div`
 width: auto;
@@ -73,7 +74,9 @@ justify-content: center;
 }
 `;
 
-export const Tile = styled.div`
+export const Tile = styled(Link)`
+  text-decoration: none;
+  color: inherit;
   width: 100%;
   height: auto;
   border-radius: 5px;
@@ -83,6 +86,16 @@ export const Tile = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+    &:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+    box-shadow: ${({ theme }) => theme.effects.tileShadowHover};
+  }
+
+  &:active {
+    filter: brightness(110%);
+  }
 
   @media(max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) { 
     max-width: 324px;

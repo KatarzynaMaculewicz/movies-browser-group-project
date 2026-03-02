@@ -35,17 +35,23 @@ export const MovieTileSection = ({ movie }) => (
       <Title>{movie.title}</Title>
       <Year>{movie.release_date?.slice(0, 4)}</Year>
 
-      <DataTile>
-        <MovieData>Production:</MovieData>
-        <Data>{movie.production_countries?.map((c) => c.name).join(",")}</Data>
-      </DataTile>
-      <DataTile>
-        <MovieData>Release date:</MovieData>
-        <Data>
-          {movie.release_date &&
-            new Date(movie.release_date).toLocaleDateString("pl-PL")}
-        </Data>
-      </DataTile>
+      {movie.production_countries?.length > 0 && (
+        <DataTile>
+          <MovieData>Production:</MovieData>
+          <Data>
+            {movie.production_countries.map((c) => c.name).join(", ")}
+          </Data>
+        </DataTile>
+      )}
+
+      {movie.release_date && (
+        <DataTile>
+          <MovieData>Release date:</MovieData>
+          <Data>
+            {new Date(movie.release_date).toLocaleDateString("pl-PL")}
+          </Data>
+        </DataTile>
+      )}
 
       <Tags>
         {movie.genres?.map((genre) => (

@@ -37,6 +37,7 @@ background-repeat: no-repeat;
 background-size: contain;
 display: flex;
 align-items: flex-end;
+justify-content: center;
 
 img {
     display: block;
@@ -60,17 +61,18 @@ img {
 `;
 
 export const TitleContainer = styled.div`
+max-width: 1328px;
 display: flex;
 flex-direction: column;
-width: auto;
-height: 176px;
-margin-left: 276px;
-margin-bottom: 57px;
+width: 100%;
+margin-left: 40px;
+height: 140px;
+margin-bottom: 40px;
 
 @media(max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
-    margin-left: 40px;
-    height: 140px;
-    margin-bottom: 40px;
+    margin-left: 24px;
+    height: 90px;
+    margin-bottom: 24px;
 };
 
 @media(max-width: ${({ theme }) => theme.breakpoints.tabletVerticalMax}px) {
@@ -80,7 +82,6 @@ margin-bottom: 57px;
 };
 
 @media(max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    width: auto;
     height: 51px;
     margin-bottom: 8px;
     margin-left: 16px;
@@ -118,7 +119,7 @@ width: auto;
 height: 40px;
 
 
-@media(max-width: ${({ theme }) => theme.breakpoints.tabletVerticalMax}px) {
+@media(max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
     font-size: 14px;
     height: 34px;
     margin-top: 16px;
@@ -151,7 +152,7 @@ line-height: 120%;
 letter-spacing: 0px;
 color: ${({ theme }) => theme.colors.white};
 
-@media(max-width: ${({ theme }) => theme.breakpoints.tabletVerticalMax}px) {
+@media(max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
     height: 24px;
     font-size: 14px;
     margin-top: 8px;
@@ -217,10 +218,11 @@ height: 40px;
 margin-right: 8px;
 vertical-align: middle;
 
-@media(max-width: ${({ theme }) => theme.breakpoints.tabletVerticalMax}px) {
+@media(max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
     width: 24px;
     height: 24px;
     margin-right: 6px;
+    margin-bottom: 6px;
 };
 
 @media(max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {

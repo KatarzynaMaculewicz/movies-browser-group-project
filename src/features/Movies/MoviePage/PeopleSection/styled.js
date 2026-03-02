@@ -6,6 +6,12 @@ max-width: 1368px;
 margin: auto;
 margin-bottom: 64px;
 
+@media(max-width: ${({ theme }) => theme.breakpoints.tabletVerticalMax}px) { 
+    width: 100%;
+    margin: auto;
+    margin-bottom: 32px;
+}
+
 @media(max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) { 
     max-width: 288px;
     margin: auto;

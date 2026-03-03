@@ -334,6 +334,7 @@ export const Votes = styled.p`
   letter-spacing: 0px;
   color: ${({ theme }) => theme.colors.black};
   margin-left: 8px;
+  justify-content: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     width: auto;

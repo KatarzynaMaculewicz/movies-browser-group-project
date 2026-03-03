@@ -53,11 +53,13 @@ export const MovieTileSection = ({ movie }) => (
         </DataTile>
       )}
 
-      <Tags>
-        {movie.genres?.map((genre) => (
-          <Tag key={genre.id}>{genre.name}</Tag>
-        ))}
-      </Tags>
+      {movie.genres?.length > 0 && (
+        <Tags>
+          {movie.genres.map((genre) => (
+            <Tag key={genre.id}>{genre.name}</Tag>
+          ))}
+        </Tags>
+      )}
 
       <RatingContent>
         {movie.vote_count === 0 ? (

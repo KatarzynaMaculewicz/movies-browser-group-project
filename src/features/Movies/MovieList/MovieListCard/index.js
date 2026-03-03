@@ -13,8 +13,7 @@ import {
   Votes,
 } from "./styled";
 import { ReactComponent as PosterPlaceholderSvg } from "../../../../images/video.svg";
-
-const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w300";
+import { IMAGE_BASE_URL } from "../../../../core/api";
 
 export const MovieListCard = ({ movies, genresMap }) => {
   return (
@@ -29,7 +28,7 @@ export const MovieListCard = ({ movies, genresMap }) => {
           <MovieTile key={movie.id} to={`/movies/${movie.id}`}>
             {movie.poster_path ? (
               <Poster
-                src={`${IMAGE_BASE_URL}${movie.poster_path}`}
+                src={`${IMAGE_BASE_URL}w300${movie.poster_path}`}
                 alt={movie.title}
               />
             ) : (

@@ -9,6 +9,7 @@ import {
   TileRole,
   PersonTile,
 } from "./styled";
+import { IMAGE_BASE_URL } from "../../../../core/api"
 
 export const Cast = ({ credits }) => {
   if (!credits) return null;
@@ -25,7 +26,7 @@ export const Cast = ({ credits }) => {
                 <TileImage>
                   {person.profile_path ? (
                     <img
-                      src={`https://image.tmdb.org/t/p/w185${person.profile_path}`}
+                      src={`${IMAGE_BASE_URL}w185${person.profile_path}`}
                       alt={person.name}
                     />
                   ) : (
@@ -52,7 +53,7 @@ export const Cast = ({ credits }) => {
                 <TileImage>
                   {person.profile_path ? (
                     <img
-                      src={`https://image.tmdb.org/t/p/w185${person.profile_path}`}
+                      src={`${IMAGE_BASE_URL}w185${person.profile_path}`}
                       alt={person.name}
                     />
                   ) : (

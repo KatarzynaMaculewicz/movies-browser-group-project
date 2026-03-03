@@ -17,6 +17,7 @@ import {
   Star,
   NoMovieIcon,
 } from "./styled";
+import { IMAGE_BASE_URL } from "../../../../core/api";
 
 export const MovieTileSection = ({ movie }) => {
   const genres = movie.genres?.filter(Boolean) || [];
@@ -26,7 +27,7 @@ export const MovieTileSection = ({ movie }) => {
       <Poster>
         {movie.poster_path ? (
           <img
-            src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+            src={`${IMAGE_BASE_URL}w342${movie.poster_path}`}
             alt={movie.title}
           ></img>
         ) : (

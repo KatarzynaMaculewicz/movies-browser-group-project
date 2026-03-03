@@ -9,9 +9,10 @@ import {
   Votes,
   BackgroundPoster,
 } from "./styled";
+import { IMAGE_BASE_URL } from "../../../../core/api";
 
-const posterPath = (path, size = "w780") =>
-  path ? `https://image.tmdb.org/t/p/${size}${path}` : null;
+const posterPath = (path, size = "original") =>
+  path ? `${IMAGE_BASE_URL}${size}${path}` : null;
 
 export const MovieSection = ({ movie }) => (
   <BackgroundPoster>

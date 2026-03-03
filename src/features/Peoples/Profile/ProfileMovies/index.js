@@ -15,6 +15,7 @@ import {
   Star,
   Camera,
 } from "./styled";
+import { IMAGE_BASE_URL } from "../../../../core/api";
 
 export const ProfileMovies = ({ credits, genresMap }) => (
   <Wrapper>
@@ -33,7 +34,7 @@ export const ProfileMovies = ({ credits, genresMap }) => (
                   <TileImage>
                     {movie.poster_path ? (
                       <img
-                        src={`https://image.tmdb.org/t/p/w185${movie.poster_path}`}
+                        src={`${IMAGE_BASE_URL}w185${movie.poster_path}`}
                         alt={movie.title}
                       />
                     ) : (
@@ -100,7 +101,7 @@ export const ProfileMovies = ({ credits, genresMap }) => (
                   <TileImage>
                     {movie.poster_path ? (
                       <img
-                        src={`https://image.tmdb.org/t/p/w185${movie.poster_path}`}
+                        src={`${IMAGE_BASE_URL}w185${movie.poster_path}`}
                         alt={movie.title}
                       />
                     ) : (

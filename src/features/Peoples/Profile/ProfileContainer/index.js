@@ -10,13 +10,14 @@ import {
   Story,
   Person,
 } from "./styled";
+import { IMAGE_BASE_URL } from "../../../../core/api";
 
 export const ProfileContainer = ({ person }) => (
   <Container>
     <ActorImage>
       {person.profile_path ? (
         <img
-          src={`https://image.tmdb.org/t/p/w342${person.profile_path}`}
+          src={`${IMAGE_BASE_URL}w342${person.profile_path}`}
           alt={person.name}
         />
       ) : (

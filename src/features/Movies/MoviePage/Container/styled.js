@@ -61,28 +61,25 @@ img {
 `;
 
 export const TitleContainer = styled.div`
-max-width: 1328px;
+align-self: flex-end;
+max-width: 1368px;
 display: flex;
 flex-direction: column;
 width: 100%;
 margin-left: 40px;
-height: 140px;
 margin-bottom: 40px;
 
 @media(max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
     margin-left: 24px;
-    height: 90px;
     margin-bottom: 24px;
 };
 
 @media(max-width: ${({ theme }) => theme.breakpoints.tabletVerticalMax}px) {
     margin-left: 24px;
-    height: 90px;
     margin-bottom: 24px;
 };
 
 @media(max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    height: 51px;
     margin-bottom: 8px;
     margin-left: 16px;
 }
@@ -90,38 +87,33 @@ margin-bottom: 40px;
 
 export const MovieTitle = styled.header`
 width: auto;
-height: 77px;
 font-size: 64px;
 font-weight: 600;
 line-height: 120%;
 letter-spacing: 0px;
 color: ${({ theme }) => theme.colors.white};
+align-self: flex-start;
+justify-content: flex-start;
 
 @media(max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
     font-size: 48px;
-    height: 58px;
 };
 
 @media(max-width: ${({ theme }) => theme.breakpoints.tabletVerticalMax}px) {
     font-size: 36px;
-    height: 44px;
 };
 
 @media(max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     width: auto;
-    height: 29px;
     font-size: 24px;
 }
 `;
 
 export const TitleRatingContent = styled.div`
 width: auto;
-height: 40px;
-
 
 @media(max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
     font-size: 14px;
-    height: 34px;
     margin-top: 16px;
     display: flex;
     justify-content: flex-start;
@@ -133,19 +125,13 @@ height: 40px;
 
 @media(max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     width: auto;
-    height: 18px;
     margin-top: 8px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    align-items: center;
     gap: 4px;
 }
 `;
 
 export const Votes = styled.div`
 width: auto;
-height: 40px;
 font-size: 16px;
 font-weight: 400;
 line-height: 120%;
@@ -153,21 +139,18 @@ letter-spacing: 0px;
 color: ${({ theme }) => theme.colors.white};
 
 @media(max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
-    height: 24px;
-    font-size: 14px;
-    margin-top: 8px;
-    margin-bottom: 0;
     color: ${({ theme }) => theme.colors.white};
+    align-self: center;
 };
 
 @media(max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) { 
     width: auto;
-    height: 20px;
     font-size: 10px;
     }
 `;
 
 export const Layout = styled.div`
+align-self: center;
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -193,7 +176,6 @@ margin-top: 16px;
 
 export const TitleRating = styled.div`
 width: auto;
-height: 40px;
 font-size: 30px;
 font-weight: 500;
 line-height: 130%;
@@ -201,13 +183,12 @@ letter-spacing: 0px;
 color: ${({ theme }) => theme.colors.white};
 
 @media(max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
+    align-self: center;
     font-size: 24px;
-    height: 34px;
 };
 
 @media(max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
    width: auto;
-   height: 18px;
    font-size: 14px;
 }
 `;

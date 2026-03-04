@@ -7,7 +7,7 @@ import {
   selectTotalResults,
   selectTotalPages,
 } from "../peopleSlice";
-import { PeopleListWrapper, StyledHeader, Container } from "./styled";
+import { PeopleListWrapper, Container } from "./styled";
 import { PeopleListCard } from "./PeopleListCard/index";
 import { Pagination, maxPageSize } from "../../../common/Pagination";
 import { PeopleListHeader } from "./PeopleListHeader";

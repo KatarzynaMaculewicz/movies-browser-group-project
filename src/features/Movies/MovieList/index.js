@@ -16,7 +16,7 @@ import { MovieListCard } from "./MovieListCard";
 import { SpinnerWrapper, StyledSpinner } from "../../../common/Loading/styled";
 import { Error } from "../../../common/Error/index";
 import { NoResults } from "../../../common/NoResults/index";
-import { Pagination } from "../../../common/Pagination";
+import { Pagination, maxPageSize } from "../../../common/Pagination";
 
 export const MovieList = () => {
   const dispatch = useDispatch();
@@ -99,7 +99,7 @@ export const MovieList = () => {
 
               <Pagination
                 page={page}
-                totalPages={totalPages > 500 ? 500 : totalPages}
+                totalPages={totalPages > maxPageSize ? maxPageSize : totalPages}
                 onPageChange={onPageChange}
               />
             </>

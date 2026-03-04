@@ -12,7 +12,7 @@ import { PeopleListCard } from "./PeopleListCard/index";
 import { StyledSpinner, SpinnerWrapper } from "../../../common/Loading/styled";
 import { Error } from "../../../common/Error/index";
 import { NoResults } from "../../../common/NoResults/index";
-import { Pagination } from "../../../common/Pagination";
+import { Pagination, maxPageSize } from "../../../common/Pagination";
 
 export const PeopleList = () => {
   const dispatch = useDispatch();
@@ -88,7 +88,7 @@ export const PeopleList = () => {
 
                 <Pagination
                   page={page}
-                  totalPages={Math.min(totalPages, 500)}
+                  totalPages={Math.min(totalPages, maxPageSize)}
                   onPageChange={onPageChange}
                 />
               </>

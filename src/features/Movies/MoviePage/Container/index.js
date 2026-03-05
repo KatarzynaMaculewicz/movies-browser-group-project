@@ -8,15 +8,23 @@ import {
   Star40px,
   Votes,
   BackgroundPoster,
+  PosterImage,
+  GradientOverlay,
 } from "./styled";
 import { IMAGE_BASE_URL } from "../../../../core/api";
 
 const posterPath = (path, size = "original") =>
   path ? `${IMAGE_BASE_URL}${size}${path}` : null;
 
-export const MovieSection = ({ movie }) => (
+export const MovieSection = ({ movie }) => {
+  const posterUrl = posterPath(movie.backdrop_path || movie.poster_path);
+
+  return (
   <BackgroundPoster>
-    <Container poster={posterPath(movie.backdrop_path || movie.poster_path)}>
+    <Container>
+      <PosterImage src={posterUrl} alt={movie.title} />
+      <GradientOverlay />
+
       <TitleContainer>
         <MovieTitle>{movie.title}</MovieTitle>
 
@@ -44,6 +52,7 @@ export const MovieSection = ({ movie }) => (
       </TitleContainer>
     </Container>
   </BackgroundPoster>
-);
+  );
+};
 
 export default MovieSection;

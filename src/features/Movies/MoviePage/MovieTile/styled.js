@@ -4,9 +4,10 @@ import { ReactComponent as StarIcon } from "../../../../images/shape-star.svg";
 
 export const MovieTile = styled.article`
   max-width: 1368px;
-  width: auto;
+  width: 90vw;
   height: auto;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 40px;
   background-color: ${({ theme }) => theme.colors.white};
   padding: 40px;
@@ -22,7 +23,6 @@ export const MovieTile = styled.article`
   box-shadow: 0px 4px 12px #bac7d580;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletVerticalMax}px) {
-    max-width: 768px;
     height: auto;
     padding: 32px;
     display: grid;
@@ -36,8 +36,7 @@ export const MovieTile = styled.article`
     margin-bottom: 48px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    max-width: 288px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileSMax}px) {
     height: auto;
     display: grid;
     grid-template-columns: auto 1fr;
@@ -57,7 +56,7 @@ export const Poster = styled.div`
   aspect-ratio: 312 / 464;
   border-radius: 5px;
   overflow: hidden;
-  background-color: ${({ theme }) => theme.colors.waterloo};
+  background-color: ${({ theme }) => theme.colors.silver};
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -217,7 +216,6 @@ export const Data = styled.li`
 
 export const Tags = styled.ul`
   width: auto;
-  height: 30px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -381,9 +379,12 @@ export const Story = styled.div`
 `;
 
 export const NoMovieIcon = styled(CameraIcon)`
-  width: 128px;
-  height: 128px;
+  /* width: 128px;
+  height: 128px; */
   stroke-width: 1.5px;
+  width: 50%;
+  height: auto;
+  opacity: 0.5;
 `;
 
 export const Star = styled(StarIcon)`

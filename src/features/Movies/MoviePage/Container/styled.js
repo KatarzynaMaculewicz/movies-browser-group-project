@@ -73,7 +73,7 @@ export const TitleContainer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
     padding: 0 24px;
-    margin-bottom: 24px;
+    bottom: 24px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {

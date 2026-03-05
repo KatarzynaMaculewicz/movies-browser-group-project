@@ -29,14 +29,14 @@ export const ProfileContainer = ({ person }) => (
 
       {person.birthday && (
         <DataTile>
-          <ActorData>Birthday:</ActorData>
+          <ActorData />
           <Data>{new Date(person.birthday).toLocaleDateString("pl-PL")}</Data>
         </DataTile>
       )}
 
       {person.place_of_birth && (
         <DataTile>
-          <ActorData2>Place of birth:</ActorData2>
+          <ActorData2 />
           <Data>{person.place_of_birth}</Data>
         </DataTile>
       )}
